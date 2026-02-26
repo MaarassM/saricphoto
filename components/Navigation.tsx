@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,19 +26,21 @@ export default function Navigation() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-md' : 'bg-transparent'
+        isScrolled ? 'bg-navy-900/95 backdrop-blur-sm shadow-md' : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
           <Link href="#home" className="flex items-center space-x-2">
-            <span
-              className={`text-2xl font-bold font-serif transition-colors ${
-                isScrolled ? 'text-navy-800' : 'text-white'
-              }`}
-            >
-              SP
-            </span>
+            <div className="relative w-12 h-12 md:w-14 md:h-14">
+              <Image
+                src="/images/logo-sp.png"
+                alt="SaricPhoto Logo"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
           </Link>
 
           <div className="hidden md:flex space-x-8">
@@ -45,9 +48,7 @@ export default function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium transition-colors hover:text-primary-500 ${
-                  isScrolled ? 'text-gray-700' : 'text-white'
-                }`}
+                className="text-sm font-medium transition-colors text-white hover:text-primary-300"
               >
                 {link.label}
               </Link>
@@ -56,7 +57,7 @@ export default function Navigation() {
 
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`md:hidden p-2 ${isScrolled ? 'text-gray-700' : 'text-white'}`}
+            className="md:hidden p-2 text-white"
             aria-label="Toggle menu"
           >
             <svg
@@ -79,14 +80,14 @@ export default function Navigation() {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white border-t">
+        <div className="md:hidden bg-navy-900 border-t border-navy-700">
           <div className="px-2 pt-2 pb-3 space-y-1">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-500 hover:bg-gray-50 rounded-md"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-primary-300 hover:bg-navy-800 rounded-md"
               >
                 {link.label}
               </Link>

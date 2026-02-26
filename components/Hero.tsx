@@ -1,18 +1,32 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { motion } from "framer-motion";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-navy-900 via-navy-800 to-primary-800">
         <div className="absolute inset-0 opacity-20">
           <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" strokeWidth="0.5" />
+              <pattern
+                id="grid"
+                width="40"
+                height="40"
+                patternUnits="userSpaceOnUse"
+              >
+                <path
+                  d="M 40 0 L 0 0 0 40"
+                  fill="none"
+                  stroke="white"
+                  strokeWidth="0.5"
+                />
               </pattern>
             </defs>
             <rect width="100%" height="100%" fill="url(#grid)" />
@@ -65,15 +79,21 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="mb-8">
-            <motion.h1
-              className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-serif font-bold text-white mb-2"
+          <div className="mb-8 flex flex-col items-center">
+            <motion.div
+              className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 mb-6"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              SP
-            </motion.h1>
+              <Image
+                src="/images/logo-sp.png"
+                alt="SaricPhoto Logo"
+                fill
+                className="object-contain drop-shadow-2xl"
+                priority
+              />
+            </motion.div>
             <motion.div
               className="text-2xl sm:text-3xl md:text-4xl font-serif text-white mb-4"
               initial={{ opacity: 0 }}
@@ -99,7 +119,15 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            Capturing moments that matter in Pula, Croatia
+            Capturing moments that matter
+          </motion.p>
+          <motion.p
+            className="text-base sm:text-lg text-white/80 mb-12 max-w-2xl mx-auto"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+          >
+            Based in Pula, Croatia
           </motion.p>
 
           <motion.div
