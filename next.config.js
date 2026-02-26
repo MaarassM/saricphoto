@@ -1,11 +1,11 @@
-                                                                         
-  /** @type {import('next').NextConfig} */                                 
-  const nextConfig = {                                                     
-    output: 'export',                                                      
-    images: {                                                              
-      unoptimized: true,                                                   
-    },                                                                     
-    basePath: process.env.NODE_ENV === 'production' ? '/saricphoto' : '',  
-  }                                                                        
-                                                                           
-  module.exports = nextConfig    
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export',
+  images: {
+    unoptimized: true,
+  },
+  basePath: process.env.NODE_ENV === 'production' ? '/saricphoto' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/saricphoto/' : '',
+}
+
+module.exports = nextConfig
