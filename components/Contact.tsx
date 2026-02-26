@@ -19,10 +19,10 @@ export default function Contact() {
           className="text-center mb-12 md:mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-navy-800 mb-4">
-            Let's Work Together
+            Let&apos;s Work Together
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Ready to capture your special moments? Get in touch and let's discuss your project
+            Ready to capture your special moments? Get in touch and let&apos;s discuss your project
           </p>
         </motion.div>
 

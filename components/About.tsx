@@ -23,12 +23,12 @@ export default function About() {
             </h2>
             <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
               <p>
-                Hello! I'm a 22-year-old professional photographer based in the beautiful coastal city of Pula, Croatia.
+                Hello! I&apos;m a 22-year-old professional photographer based in the beautiful coastal city of Pula, Croatia.
                 My passion for photography began as a hobby and has evolved into a profession that I truly love.
               </p>
               <p>
                 I specialize in capturing the essence of spaces and moments that matter most to my clients.
-                Whether it's showcasing the beauty of a property, immortalizing the joy of a wedding day,
+                Whether it&apos;s showcasing the beauty of a property, immortalizing the joy of a wedding day,
                 documenting corporate events, or creating compelling promotional content, I bring dedication
                 and creativity to every project.
               </p>
