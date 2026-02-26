@@ -66,7 +66,7 @@ export default function Portfolio() {
     : portfolioItems.filter(item => item.category === activeCategory);
 
   return (
-    <section id="portfolio" className="py-20 md:py-32 bg-gray-50">
+    <section id="portfolio" className="py-12 md:py-32 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -94,7 +94,7 @@ export default function Portfolio() {
             <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`px-6 py-3 rounded-full font-medium transition-all transform hover:scale-105 ${
+              className={`px-4 py-2 md:px-6 md:py-3 text-sm md:text-base rounded-full font-medium transition-all transform hover:scale-105 ${
                 activeCategory === category.id
                   ? 'bg-navy-800 text-white shadow-lg'
                   : 'bg-white text-gray-700 hover:bg-gray-100 shadow'
@@ -109,7 +109,7 @@ export default function Portfolio() {
         {/* Portfolio Grid */}
         <motion.div
           layout
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+          className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8"
         >
           {filteredItems.map((item, index) => (
             <motion.div
@@ -119,7 +119,7 @@ export default function Portfolio() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.4, delay: index * 0.05 }}
-              className="group relative aspect-[3/4] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
+              className="group relative aspect-square sm:aspect-[3/4] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
             >
               <img
                 src={item.imageUrl}

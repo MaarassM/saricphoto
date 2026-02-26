@@ -9,7 +9,7 @@ export default function About() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="py-20 md:py-32 bg-white">
+    <section id="about" className="py-12 md:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={ref} className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           {/* Text Content */}
@@ -58,7 +58,7 @@ export default function About() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            <div className="aspect-[4/5] relative rounded-2xl overflow-hidden shadow-2xl">
+            <div className="aspect-square md:aspect-[4/5] relative rounded-2xl overflow-hidden shadow-2xl">
               <img
                 src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=600&h=750&fit=crop"
                 alt="Photographer at work"
