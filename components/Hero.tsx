@@ -86,12 +86,10 @@ export default function Hero() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <Image
-                src="/images/logo-sp.png"
+              <img
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/logo-sp.png`}
                 alt="SaricPhoto Logo"
-                fill
-                className="object-contain drop-shadow-2xl"
-                priority
+                className="w-full h-full object-contain drop-shadow-2xl"
               />
             </motion.div>
             <motion.div

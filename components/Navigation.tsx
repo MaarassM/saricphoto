@@ -33,12 +33,10 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16 md:h-20">
           <Link href="#home" className="flex items-center space-x-2">
             <div className="relative w-12 h-12 md:w-14 md:h-14">
-              <Image
-                src="/images/logo-sp.png"
+              <img
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/logo-sp.png`}
                 alt="SaricPhoto Logo"
-                fill
-                className="object-contain"
-                priority
+                className="w-full h-full object-contain"
               />
             </div>
           </Link>
